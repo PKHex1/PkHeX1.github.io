@@ -183,14 +183,14 @@
 <ul>
     <li><a href="https://pkhex.org/" target="_blank">PKHeX Android</a></li>
     <li><a href="https://www.reddit.com/r/PKHeX/" target="_blank">PKHeX Android Reddit</a></li>
-    <li><a href="https://pkhex.org/download/android/" target="_blank">PKHeX Android APK</a></li>
-    <li><a href="https://pkhex.org/download/android/" target="_blank">PKHeX Android APK Download</a></li>
+    <li><a href="https://cutt.ly/SwFPbbvW" target="_blank">PKHeX Android APK</a></li>
+    <li><a href="https://cutt.ly/SwFPbbvW" target="_blank">PKHeX Android APK Download</a></li>
     <li><a href="https://github.com/kwsch/PKHeX" target="_blank">PKHeX Android GitHub</a></li>
-    <li><a href="https://pkhex.org/download/android/" target="_blank">PKHeX Android Citra</a></li>
-    <li><a href="https://pkhex.org/download/android/" target="_blank">PKHeX Android Crash</a></li>
-    <li><a href="https://pkhex.org/download/android/" target="_blank">PKHeX Android Mod APK</a></li>
-    <li><a href="https://pkhex.org/download/android/" target="_blank">PKHeX Android Drastic</a></li>
-    <li><a href="https://pkhex.org/download/android/" target="_blank">PKHeX Android Tutorial</a></li>
+    <li><a href="https://cutt.ly/SwFPbbvW" target="_blank">PKHeX Android Citra</a></li>
+    <li><a href="https://cutt.ly/SwFPbbvW" target="_blank">PKHeX Android Crash</a></li>
+    <li><a href="https://cutt.ly/SwFPbbvW" target="_blank">PKHeX Android Mod APK</a></li>
+    <li><a href="https://cutt.ly/SwFPbbvW" target="_blank">PKHeX Android Drastic</a></li>
+    <li><a href="https://cutt.ly/SwFPbbvW" target="_blank">PKHeX Android Tutorial</a></li>
 </ul>
 
   </script>
@@ -203,5 +203,48 @@
 
   gtag('config', 'G-7VKG827FRT');
 </script>
+    <script>
+    // Fetch releases from GitHub API
+    fetch('https://api.github.com/repos/kwsch/PKHeX/releases')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(releases => {
+            // Loop through releases and create widgets
+            releases.forEach(release => {
+                const releaseWidget = document.createElement('div');
+                releaseWidget.className = 'release-widget';
+
+                releaseWidget.innerHTML = `
+                    <h2>${release.name}</h2>
+                    <p>Date: ${new Date(release.published_at).toDateString()}</p>
+                    <p>Latest Commit: ${release.target_commitish}</p>
+
+                    <h3>${release.tag_name} - ${release.prerelease ? 'Pre-release' : 'Stable Release'}</h3>
+                    <ul>
+                        ${release.body.split('\n').map(point => `<li>${point}</li>`).join('')}
+                    </ul>
+
+                    <h3>Contributors</h3>
+                    <ul>
+                        ${release.author ? `<li>${release.author.login}</li>` : ''}
+                        ${release.contributors.map(contributor => `<li>${contributor.login}</li>`).join('')}
+                    </ul>
+
+                    <p>Assets: 
+                        ${release.assets.map(asset => `<a href="${asset.browser_download_url}">${asset.name}</a>`).join('')}
+                    </p>
+                `;
+
+                // Append the release widget to the container
+                document.body.appendChild(releaseWidget);
+            });
+        })
+        .catch(error => console.error('Error fetching releases:', error));
+</script>
+
 </body>
 </html>
