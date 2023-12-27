@@ -1,1 +1,205 @@
-h
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PKHeX - Pokémon Core Series Save Editor">
+    <meta name="keywords" content="PKHeX, Pokémon, Save Editor, C#, .NET">
+    <meta name="author" content="Your Name">
+    <meta name="google-site-verification" content="ISmpSaCRYuQH8iIcnq9M-Jg0628XYS_iu_xQjaRysAM" />
+    <title>PKHeX - Pokémon Core Series Save Editor</title>
+  <meta name="keywords" content="Pokemon, PKHeX, save editor, Pokemon forums">
+  <meta name="robots" content="index, follow">
+
+    <!-- External CSS files or stylesheets can be linked here -->
+
+    <!-- Add any additional meta tags as needed for social media sharing -->
+</head>
+<body>
+  <h1>Project Pokemon Forums</h1>
+  <h2>Welcome to Project Pokemon Forums</h2>
+
+    <div>
+        <span>English</span> / <a href="/">Español</a> / <a href="/">Français</a> / <a href="/">Deutsch</a> / <a href="/">Italiano</a> / <a href="/">繁體中文</a> / <a href="/">简体中文</a>
+    </div>
+     <div>
+        <span>download</span> / <a href="/">pkhex mac</a> / <a href="/">pkhex linux</a> / <a href="/">pkhex android</a> 
+    </div>
+
+    <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License">
+  <a href="https://cutt.ly/SwFPbbvW">DONATE ME FOR FREE</a> / <a href="https://cutt.ly/SwFPbbvW">BUY ME COFFEE</a>
+    <p>Pokémon core series save editor, programmed in <a href="https://en.wikipedia.org/wiki/C_Sharp_%28programming_language%29">C#</a>.</p>
+
+    <p>Supports the following files:</p>
+    <ul>
+        <li>Save files ("main", *.sav, *.dsv, *.dat, *.gci, *.bin)</li>
+        <li>GameCube Memory Card files (*.raw, *.bin) containing GC Pokémon savegames.</li>
+        <li>Individual Pokémon entity files (.pk*, *.ck3, *.xk3, *.pb7, *.sk2, *.bk4, *.rk4)</li>
+        <li>Mystery Gift files (*.pgt, *.pcd, *.pgf, .wc*) including conversion to .pk*</li>
+        <li>Importing GO Park entities (*.gp1) including conversion to .pb7</li>
+        <li>Importing teams from Decrypted 3DS Battle Videos</li>
+        <li>Transferring from one generation to another, converting formats along the way.</li>
+    </ul>
+
+    <p>Data is displayed in a view which can be edited and saved. The interface can be translated with resource/external text files so that different languages can be supported.</p>
+
+    <p>Pokémon Showdown sets and QR codes can be imported/exported to assist in sharing.</p>
+
+    <p>PKHeX expects save files that are not encrypted with console-specific keys. Use a savedata manager to import and export savedata from the console (<a href="https://github.com/FlagBrew/Checkpoint">Checkpoint</a>, save_manager, <a href="https://github.com/J-D-K/JKSM">JKSM</a>, or SaveDataFiler).</p>
+
+    <p><strong>We do not support or condone cheating at the expense of others. Do not use significantly hacked Pokémon in battle or in trades with those who are unaware hacked Pokémon are in use.</strong></p>
+
+    <h2>Screenshots</h2>
+    <img src="https://i.imgur.com/HZs37cM.png" alt="Main Window">
+
+    <h2>Building</h2>
+    <p>PKHeX is a Windows Forms application which requires <a href="https://dotnet.microsoft.com/download/dotnet/8.0">.NET 8.0</a>.</p>
+    <p>The executable can be built with any compiler that supports C# 12.</p>
+
+    <h3>Build Configurations</h3>
+    <p>Use the Debug or Release build configurations when building. There isn't any platform specific code to worry about!</p>
+  <h2>Latest Release: 23.12.22</h2>
+  <p><a href="#your-release-link">kwsch</a> released this 5 days ago</p>
+
+  <pre>
+  23.12.22 - New Update:
+
+  Legality: Updates for Scarlet & Violet 3.0.0 behaviors revised to fix inaccuracies.
+  Fixed: Recognition of marks, stellar fixed encounters, and underdepths encounters.
+  Gold Bottle Cap on flawless IVs in S/V is now flagged; upload to HOME & back to get the official fix.
+  Fixed: Gen9 S/V 7-Star Raid records now can be edited with the revised raid block editor. Thanks @foohyfooh!
+  Fixed: Other misc regressions too insignificant to note (but observed & reported by many -- thanks!)
+  </pre>
+  <p>Assets: 
+      <a href="#">Source code (zip)</a>
+      <a href="#">Source code (tar.gz)</a>
+  </p>
+  <!-- ... (remaining body content) ... -->
+    <h2>Dependencies</h2>
+    <p>PKHeX's QR code generation code is taken from <a href="https://github.com/codebude/QRCoder">QRCoder</a>, which is licensed under <a href="https://github.com/codebude/QRCoder/blob/master/LICENSE.txt">the MIT license</a>.</p>
+    <p>PKHeX's shiny sprite collection is taken from <a href="https://github.com/msikma/pokesprite">pokesprite</a>, which is licensed under <a href="https://github.com/msikma/pokesprite/blob/master/LICENSE">the MIT license</a>.</p>
+    <p>PKHeX's Pokémon Legends: Arceus sprite collection is taken from the <a href="https://www.deviantart.com/pikafan2000/art/National-Pokedex-Version-Delta-Icon-Dex-824897934">National Pokédex - Icon Dex</a> project and its abundance of collaborators and contributors.</p>
+
+    <h3>IDE</h3>
+    <p>PKHeX can be opened with IDEs such as <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio</a> by opening the .sln or .csproj file.</p>
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "http://www.yourwebsite.com",
+      "name": "Your Website",
+      "description": "Description of your website",
+      "logo": "http://www.yourwebsite.com/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-123-456-7890",
+        "contactType": "customer service"
+      }
+    }
+        <title>PKHeX Releases</title>
+    <style>
+        /* Add your custom styles here */
+        .release-widget {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    // Fetch releases from GitHub API
+    fetch('https://api.github.com/repos/kwsch/PKHeX/releases')
+    .then(response => response.json())
+    .then(releases => {
+        // Loop through releases and create widgets
+        releases.forEach(release => {
+            const releaseWidget = document.createElement('div');
+            releaseWidget.className = 'release-widget';
+
+            releaseWidget.innerHTML = `
+                <h2>${release.name}</h2>
+                <p>Date: ${new Date(release.published_at).toDateString()}</p>
+                <p>Latest Commit: ${release.target_commitish}</p>
+
+                <h3>${release.tag_name} - ${release.prerelease ? 'Pre-release' : 'Stable Release'}</h3>
+                <ul>
+                    ${release.body.split('\n').map(point => `<li>${point}</li>`).join('')}
+                </ul>
+
+                <h3>Contributors</h3>
+                <ul>
+                    ${release.author ? `<li>${release.author.login}</li>` : ''}
+                    ${release.contributors.map(contributor => `<li>${contributor.login}</li>`).join('')}
+                </ul>
+
+                <p>Assets: 
+                    ${release.assets.map(asset => `<a href="${asset.browser_download_url}">${asset.name}</a>`).join('')}
+                </p>
+            `;
+
+            document.body.appendChild(releaseWidget);
+        });
+    })
+    .catch(error => console.error('Error fetching releases:', error));
+    </script>
+
+    <title>PKHeX Android Resources</title>
+    <style>
+        /* Add your custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <h2>PKHeX Android Resources</h2>
+
+<ul>
+    <li><a href="https://pkhex.org/" target="_blank">PKHeX Android</a></li>
+    <li><a href="https://www.reddit.com/r/PKHeX/" target="_blank">PKHeX Android Reddit</a></li>
+    <li><a href="https://pkhex.org/download/android/" target="_blank">PKHeX Android APK</a></li>
+    <li><a href="https://pkhex.org/download/android/" target="_blank">PKHeX Android APK Download</a></li>
+    <li><a href="https://github.com/kwsch/PKHeX" target="_blank">PKHeX Android GitHub</a></li>
+    <li><a href="https://pkhex.org/download/android/" target="_blank">PKHeX Android Citra</a></li>
+    <li><a href="https://pkhex.org/download/android/" target="_blank">PKHeX Android Crash</a></li>
+    <li><a href="https://pkhex.org/download/android/" target="_blank">PKHeX Android Mod APK</a></li>
+    <li><a href="https://pkhex.org/download/android/" target="_blank">PKHeX Android Drastic</a></li>
+    <li><a href="https://pkhex.org/download/android/" target="_blank">PKHeX Android Tutorial</a></li>
+</ul>
+
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7VKG827FRT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7VKG827FRT');
+</script>
+</body>
+</html>
